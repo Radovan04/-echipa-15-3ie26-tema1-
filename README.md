@@ -1,7 +1,7 @@
-Site ul nostru este despre "afecerea" noastra fictiva in care suntem o echipa de arhitecti si ne ocupam de renovarea studiouri-lor,apartamentelor,caselor etc.<br>
-Platformele folosite sunt - "bolt.new","Gemini" ,"github","wampp","Vscode"
-Surse de inspiratie : "google gemini".<br>
-Raicici Radovan - liderul echipei , am facut pagina home a stie-ului + conectare wamp + editare vscode<br>
-Bologa Cristian - Documentare + pagina de contact 
-Salcan Ionut - sa ocupat de js 
+Site ul nostru este despre "afacerea" noastra fictiva in care suntem o echipa de arhitecti si ne ocupam de renovarea studiouri-lor, apartamentelor, caselor etc.<br>
+Platformele folosite sunt - "Bolt.new","Gemini" ,"Github","Wampp","Vscode"
+Surse de inspiratie : "Google Gemini".<br>
+Raicici Radovan - liderul echipei , am facut pagina home a site-ului + conectare Wamp + editare vscode<br>
+Bologa Cristian - Documentare + pagina de contact<br>
+Salcan Ionut - sa ocupat de js<br>
 Andrei szilagy - css
