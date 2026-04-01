@@ -45,6 +45,7 @@ function initContactForm() {
 
             const name = document.getElementById('name');
             const email = document.getElementById('email');
+            const subject = document.getElementById('subject');
             const message = document.getElementById('message');
 
             let isValid = true;
@@ -65,6 +66,14 @@ function initContactForm() {
                 isValid = false;
             }
 
+            if (!subject.value.trim()) {
+                showError('subject', 'Subiectul este obligatoriu');
+                isValid = false;
+            } else if (subject.value.trim().length < 5) {
+                showError('subject', 'Subiectul trebuie sa contina cel putin 5 caractere');
+                isValid = false;
+            }
+
             if (!message.value.trim()) {
                 showError('message', 'Mesajul este obligatoriu');
                 isValid = false;
@@ -74,7 +83,7 @@ function initContactForm() {
             }
 
             if (isValid) {
-                submitForm(name.value, email.value, message.value);
+                submitForm(name.value, email.value, subject.value, message.value);
             }
         });
 
@@ -150,6 +159,14 @@ function validateField(field) {
             showError(fieldId, 'Te rugam sa introduci o adresa de email valida');
             return false;
         }
+    } else if (fieldId === 'subject') {
+        if (!value) {
+            showError(fieldId, 'Subiectul este obligatoriu');
+            return false;
+        } else if (value.length < 5) {
+            showError(fieldId, 'Subiectul trebuie sa contina cel putin 5 caractere');
+            return false;
+        }
     } else if (fieldId === 'message') {
         if (!value) {
             showError(fieldId, 'Mesajul este obligatoriu');
@@ -168,7 +185,7 @@ function isValidEmail(email) {
     return emailRegex.test(email);
 }
 
-function submitForm(name, email, message) {
+function submitForm(name, email, subject, message) {
     const contactForm = document.getElementById('contactForm');
     const successMessage = document.getElementById('successMessage');
     const errorMessageBox = document.getElementById('errorMessage');
@@ -176,6 +193,7 @@ function submitForm(name, email, message) {
     const formData = {
         name: name,
         email: email,
+        subject: subject,
         message: message,
         timestamp: new Date().toISOString()
     };

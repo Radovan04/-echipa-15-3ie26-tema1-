@@ -108,19 +108,20 @@
                         <form id="contactForm" class="contact-form" novalidate>
                             <div class="form-group">
                                 <label for="name">Nume <span class="required">*</span></label>
-                                <input type="text" id="name" name="name" required>
+                                <input type="text" id="name" name="name" autocomplete="name" placeholder="Ex: Ana Popescu" required>
                                 <span class="error-message" id="nameError"></span>
                             </div>
 
                             <div class="form-group">
                                 <label for="email">Email <span class="required">*</span></label>
-                                <input type="email" id="email" name="email" required>
+                                <input type="email" id="email" name="email" autocomplete="email" placeholder="exemplu@domeniu.ro" required>
                                 <span class="error-message" id="emailError"></span>
                             </div>
 
                             <div class="form-group">
-                                <label for="subject">Subiect</label>
-                                <input type="text" id="subject" name="subject">
+                                <label for="subject">Subiect <span class="required">*</span></label>
+                                <input type="text" id="subject" name="subject" autocomplete="off" placeholder="Ex: Intrebare despre oferta" required>
+                                <span class="error-message" id="subjectError"></span>
                             </div>
 
                             <div class="form-group">
@@ -132,7 +133,7 @@
                             <button type="submit" class="btn btn-primary">Trimite Mesajul</button>
                         </form>
 
-                        <div id="successMessage" class="success-message" style="display: none;">
+                        <div id="successMessage" class="success-message" role="status" aria-live="polite" style="display: none;">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                                 <polyline points="22 4 12 14.01 9 11.01"></polyline>
@@ -140,7 +141,7 @@
                             <p>Multumim! Mesajul tau a fost trimis cu succes. Te vom contacta in cel mai scurt timp.</p>
                         </div>
 
-                        <div id="errorMessage" class="error-message-box" style="display: none;">
+                        <div id="errorMessage" class="error-message-box" role="alert" aria-live="assertive" style="display: none;">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <circle cx="12" cy="12" r="10"></circle>
                                 <line x1="15" y1="9" x2="9" y2="15"></line>
@@ -157,9 +158,13 @@
             <div class="container">
                 <h2 class="section-title">Unde Ne Gasesti</h2>
                 <div class="map-placeholder">
-                    <img src="https://images.pexels.com/photos/2881785/pexels-photo-2881785.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Locatia Design Studio pe harta">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2756.5318369943323!2d21.210057315699355!3d45.74887197910513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4745671e8ff7f7a7%3A0xccb6ae87a6ed8a3e!2sBulevardul%20Vasile%20P%C4%83rvan%2C%20Timi%C8%99oara!5e0!3m2!1sen!2sro!4v1700000000000!5m2!1sen!2sro"
+                        width="100%" height="450" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        title="Harta locatiei Design Studio">
+                    </iframe>
                     <div class="map-overlay">
-                        <p>Strada Bd Vasile Parvan,Timisoara</p>
+                        <p>Strada Bd Vasile Parvan, Timisoara</p>
                     </div>
                 </div>
             </div>
