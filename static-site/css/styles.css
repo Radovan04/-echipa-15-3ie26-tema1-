@@ -314,12 +314,13 @@ section {
 .portfolio-image {
     aspect-ratio: 1;
     overflow: hidden;
+    background-color: var(--white);
 }
 
 .portfolio-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: var(--transition);
 }
 
