@@ -807,7 +807,8 @@ section {
     .values-grid,
     .team-grid,
     .faq-grid,
-    .gallery-grid {
+    .gallery-grid,
+    .testimonials-grid {
         grid-template-columns: 1fr;
     }
 
@@ -906,6 +907,122 @@ section {
 .portfolio-item p {
     font-size: 1rem;
     color: #555;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 5rem 0;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.testimonial-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    transition: var(--transition);
+    border-left: 4px solid var(--primary-color);
+}
+
+.testimonial-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    transform: translateY(-5px);
+}
+
+.testimonial-header {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+
+.testimonial-avatar {
+    flex-shrink: 0;
+}
+
+.testimonial-avatar img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+}
+
+.testimonial-author {
+    flex: 1;
+}
+
+.testimonial-author h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+    color: var(--text-dark);
+}
+
+.testimonial-role {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin: 0;
+}
+
+.testimonial-rating {
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 0.25rem;
+}
+
+.testimonial-rating .star {
+    color: #ffc107;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-light);
+    font-style: italic;
+    margin: 0;
+}
+
+/* Testimonials Stats Section */
+.testimonials-stats {
+    background-color: var(--bg-light);
+    padding: 5rem 0;
+    margin-top: 3rem;
+}
+
+.testimonials-stats .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+/* Testimonials CTA Section */
+.testimonials-cta {
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 5rem 0;
+    margin-top: 3rem;
+    border-radius: 8px;
+}
+
+.testimonials-cta h2 {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.testimonials-cta p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
 }
 
 .cta-section {
