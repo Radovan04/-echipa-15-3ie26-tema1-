@@ -887,3 +887,10 @@ portfolio-gallery {
 .cta-section .btn-secondary:hover {
     background-color: #555;
 }
+
+.portfolio-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
