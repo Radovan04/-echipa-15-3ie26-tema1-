@@ -54,7 +54,7 @@ function initContactForm() {
                 showError('name', 'Numele este obligatoriu');
                 isValid = false;
             } else if (name.value.trim().length < 2) {
-                showError('name', 'Numele trebuie sa contina cel putin 2 caractere');
+                showError('name', 'Numele trebuie să conțină cel puțin 2 caractere');
                 isValid = false;
             }
 
@@ -62,7 +62,7 @@ function initContactForm() {
                 showError('email', 'Email-ul este obligatoriu');
                 isValid = false;
             } else if (!isValidEmail(email.value.trim())) {
-                showError('email', 'Te rugam sa introduci o adresa de email valida');
+                showError('email', 'Te rugăm să introduci o adresă de email validă');
                 isValid = false;
             }
 
@@ -70,7 +70,7 @@ function initContactForm() {
                 showError('subject', 'Subiectul este obligatoriu');
                 isValid = false;
             } else if (subject.value.trim().length < 5) {
-                showError('subject', 'Subiectul trebuie sa contina cel putin 5 caractere');
+                showError('subject', 'Subiectul trebuie să conțină cel puțin 5 caractere');
                 isValid = false;
             }
 
@@ -78,7 +78,7 @@ function initContactForm() {
                 showError('message', 'Mesajul este obligatoriu');
                 isValid = false;
             } else if (message.value.trim().length < 10) {
-                showError('message', 'Mesajul trebuie sa contina cel putin 10 caractere');
+                showError('message', 'Mesajul trebuie să conțină cel puțin 10 caractere');
                 isValid = false;
             }
 
@@ -148,7 +148,7 @@ function validateField(field) {
             showError(fieldId, 'Numele este obligatoriu');
             return false;
         } else if (value.length < 2) {
-            showError(fieldId, 'Numele trebuie sa contina cel putin 2 caractere');
+            showError(fieldId, 'Numele trebuie să conțină cel puțin 2 caractere');
             return false;
         }
     } else if (fieldId === 'email') {
@@ -156,7 +156,7 @@ function validateField(field) {
             showError(fieldId, 'Email-ul este obligatoriu');
             return false;
         } else if (!isValidEmail(value)) {
-            showError(fieldId, 'Te rugam sa introduci o adresa de email valida');
+            showError(fieldId, 'Te rugăm să introduci o adresă de email validă');
             return false;
         }
     } else if (fieldId === 'subject') {
@@ -164,7 +164,7 @@ function validateField(field) {
             showError(fieldId, 'Subiectul este obligatoriu');
             return false;
         } else if (value.length < 5) {
-            showError(fieldId, 'Subiectul trebuie sa contina cel putin 5 caractere');
+            showError(fieldId, 'Subiectul trebuie să conțină cel puțin 5 caractere');
             return false;
         }
     } else if (fieldId === 'message') {
@@ -172,7 +172,7 @@ function validateField(field) {
             showError(fieldId, 'Mesajul este obligatoriu');
             return false;
         } else if (value.length < 10) {
-            showError(fieldId, 'Mesajul trebuie sa contina cel putin 10 caractere');
+            showError(fieldId, 'Mesajul trebuie să conțină cel puțin 10 caractere');
             return false;
         }
     }
