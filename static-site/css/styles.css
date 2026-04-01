@@ -312,7 +312,7 @@ section {
 }
 
 .portfolio-image {
-    height: 400px;
+    aspect-ratio: 1;
     overflow: hidden;
 }
 
